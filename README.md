@@ -17,5 +17,3 @@ Machine drivers interfacing with MLAB
 ## Installation
 
 Each driver has it's own specification for Node.js version. Use driver README.md for instructions.
-```
-    
