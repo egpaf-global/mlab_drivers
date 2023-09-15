@@ -1,0 +1,10 @@
+{
+	"protocol": "http",
+	"host": "192.168.88.129",
+	"port": "3121",
+	"sport": "8001",
+	"username": "administrator",
+	"password": "letmein",
+	"path": "/api/update_result.php",
+	"machineName": "mindray-BC3000"
+}
