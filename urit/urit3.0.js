@@ -76,11 +76,8 @@ function dataProcessing(specimenID, results) {
 	try {
 		results.forEach(result => {
 			var testName = result.split("|")[3]; // getting test name
-			console.log(testName)
 			var obsResult = result.split("|")[5]; // getting result from the segment
-			console.log(obsResult)
 			var testName = kx21n[testName]; // getting the correct naming as per LIMS
-			console.log(testName);
 
 			if (specimenID && testName) {
 				var url = `${config.protocol}://${config.host}:${config.sport}${config.path}` +
@@ -147,8 +144,7 @@ function processHL7Message(data, callback) {
 
 			// Once you have extracted the information, you can process it
 			// and create a response message
-			
-			let specimenId = String(myData).split("PID")[1].split("OBR")[0].split("|")[3];
+			let specimenId = String(myData).split("PID")[1].split("OBR")[1].split("|")[3];
 			let arrayData = String(myData).split("PID")[1].split("OBR")[1].split("OBX");
 			
 			dataProcessing(specimenId, arrayData);
